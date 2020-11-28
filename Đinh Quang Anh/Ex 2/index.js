@@ -75,11 +75,12 @@ class BookCase {
 var mainList = document.querySelector("#main-list");
 let dataBookCaseLocal = localStorage.getItem("BookCase");
 let dataBookCase = {};
+let bookCase = new BookCase(dataBookCase);
 if (dataBookCaseLocal !== null) {
   dataBookCase = JSON.parse(dataBookCaseLocal);
+  bookCase = new BookCase(dataBookCase);
+  bookCase.render();
 }
-let bookCase = new BookCase(dataBookCase);
-bookCase.render();
 
 const addKey = document.querySelector("#add-book");
 addKey.addEventListener("click", () => {
