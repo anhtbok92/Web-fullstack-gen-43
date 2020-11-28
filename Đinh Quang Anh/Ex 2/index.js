@@ -82,7 +82,9 @@ if (dataBookCaseLocal !== null) {
   bookCase.render();
 }
 
+const addModal = document.querySelector("#add-modal")
 const addKey = document.querySelector("#add-book");
+
 addKey.addEventListener("click", () => {
   bookCase.add();
 });

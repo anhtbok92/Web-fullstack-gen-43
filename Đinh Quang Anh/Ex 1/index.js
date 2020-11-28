@@ -29,7 +29,7 @@ add.addEventListener("click", () => {
       renderDataList();
     }
   } else {
-    // Sorry! No Web Storage support..
+    console.log("Sorry! No Web Storage support..");
   }
 });
 const mainList = document.querySelector("#main-list");
@@ -56,9 +56,7 @@ var renderDataList = () => {
           let strContent =
             removeList[i].parentElement.parentElement.textContent;
           strContent = strContent.trim();
-          console.log(strContent);
           let idTask = strContent.slice(0, 36);
-          console.log(idTask);
           localStorage.removeItem(idTask);
           renderDataList();
         }
