@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BookList</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+    <!-- <script src="index.js"></script> -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-container">
+            <div class="title">
+                Book List
+            </div>
+            <div class="form-container">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Book name</label>
+                        <input type="text" class="form-control" id="bookName" aria-describedby="emailHelp"
+                            placeholder="Enter book name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Description</label>
+                        <input type="text" class="form-control" id="bookDescription"
+                            placeholder="Enter book description">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Author</label>
+                        <input type="text" class="form-control" id="bookAuthor" placeholder="Enter book author">
+                    </div>
+
+                    <button type="button" class="btn btn-primary" onClick="addBook()">Add</button>
+                </form>
+            </div>
+        </div>
+        <div class="list-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Author</th>
+                    </tr>
+                </thead>
+                <tbody id="book-list-body">
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</body>
+
+<script>
+    var list = [];
+    function addBook() {
+        let bookName = document.getElementById("bookName").value;
+        let bookDescription = document.getElementById("bookDescription").value;
+        let bookAuthor = document.getElementById("bookAuthor").value;
+        let newBook = {
+            name: bookName,
+            description: bookDescription,
+            author: bookAuthor
+        }
+        console.log(newBook);
+        list.push(newBook);
+        console.log(list);
+        document.getElementById("bookName").value = "";
+        document.getElementById("bookDescription").value = "";
+        document.getElementById("bookAuthor").value = "";
+        let bookList = document.getElementById("book-list-body");
+        bookList.innerHTML = "";
+        for (let book of list) {
+            bookList.innerHTML +=
+                `<tr>
+                 <th>${list.indexOf(book) + 1}</th>
+                 <td>${book.name}</td>
+                 <td>${book.description}</td>
+                 <td>${book.author}</td>
+                 </tr>`
+        }
+    }
+</script>
+
+</html>
