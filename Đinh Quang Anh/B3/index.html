@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @font-face {
+            font-family: mk3;
+            src: url(./font/Apex\ Mk3-Medium.otf);
+        }
+
+        @font-face {
+            font-family: dirga;
+            src: url(./font/Dirga.ttf);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: mk3;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .btn-box {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 30px;
+        }
+
+        .btn-trans1 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn-trans1 a {
+            position: relative;
+            width: 150px;
+            height: 55px;
+            text-align: center;
+            line-height: 55px;
+            margin: 10px;
+            text-transform: uppercase;
+            background-color: #191919;
+            border-radius: 2px;
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing: 2px;
+            overflow: hidden;
+        }
+
+        .btn-trans1 a span {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            transition: 0s ease-in;
+        }
+
+        .btn-trans1 a:hover span {
+            transform: translateY(-99%);
+            transition: 0.4s ease-in;
+        }
+
+        .btn-trans1 a:before {
+            content: '';
+            position: absolute;
+            bottom: -250px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px;
+            height: 250px;
+            background-color: rgb(240, 58, 58);
+            border-radius: 50%;
+            transition: 0.4s ease-in;
+        }
+
+        .btn-trans1 a:hover:before {
+            bottom: -150px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Where do you want to go?</h1>
+
+    <div class="btn-box">
+        <div class="btn-trans1">
+            <a href="/header">
+                <span>header</span>
+                <span>header</span>
+            </a>
+        </div>
+        <div class="btn-trans1">
+            <a href="/navigator">
+                <span>navigator</span>
+                <span>navigator</span>
+            </a>
+        </div>
+        <div class="btn-trans1">
+            <a href="/content">
+                <span>content</span>
+                <span>content</span>
+            </a>
+        </div>
+        <div class="btn-trans1">
+            <a href="/footer">
+                <span>footer</span>
+                <span>footer</span>
+            </a>
+        </div>
+    </div>
+
+    <h1>Or</h1>
+
+    <div class="btn-trans1">
+        <a href="/home">
+            <span>Home</span>
+            <span>home</span>
+        </a>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
