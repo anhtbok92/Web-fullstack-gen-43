@@ -1,0 +1,35 @@
+.imgItems{
+    width: auto;
+    height: 100px;
+    background-color: aqua;
+}
+.imgItem{
+    width: 100%;
+    height: auto;
+    margin-left: 5px;
+    background-color: black;
+}
+.banner div{
+    width: 95%;
+    height: 60px;
+    margin: 10px 20px 10px 0px;
+    background-color: aqua;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+}
+.bannerContact{
+    margin: 20px 0px 0px 20px;
+    background-color: aqua;
+    text-transform: uppercase;
+    text-align: center;
+    height: 90px;
+    line-height: 90px;
+
+}
+.col-md-8 h5,.col-md-8 .news{
+    margin-left: 20px;
+}
+.col-sm-4 ul li{
+    list-style: none;
+}

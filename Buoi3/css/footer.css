@@ -1,0 +1,21 @@
+#footer{
+    display: flex;
+    justify-content: space-between;
+}
+#moreInfo ul{
+    display: flex;
+}
+#moreInfo{
+    margin-right: 20px;
+}
+#moreInfo ul li{
+    list-style: none;
+    margin: 0px 10px;
+}
+#moreInfo p{
+    text-align:right ;
+    padding-right: 10px;
+}
+#info{
+    margin-left: 20px;
+}
