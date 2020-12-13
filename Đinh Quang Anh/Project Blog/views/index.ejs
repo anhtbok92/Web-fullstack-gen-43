@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header'); -%>
+
+  <body>
+    <%- include('layouts/navbar'); -%>
+      <!-- Page Header -->
+      <header class="masthead" style="background-image: url('img/home-bg.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              <div class="site-heading">
+                <h1>Pastetu Blog</h1>
+                <span class="subheading">Welcome to my blog</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <% for (var i=0; i < blogposts.length; i++) { %>
+              <div class="post-preview">
+                <div class="btn btn-primary float-right btn-del">
+                  <a href="/post/<%= blogposts[i]._id %>/delete">
+                    Delete</a>
+                  |
+                  <a href="/post/<%= blogposts[i]._id %>/delete">
+                    Edit
+                  </a>
+                </div>
+                <a href="/post/<%= blogposts[i]._id %>">
+                  <h2 class="post-title">
+                    <%= blogposts[i].title %>
+                  </h2>
+                  <h3 class="post-subtitle">
+                    <%= blogposts[i].body %>
+                  </h3>
+                </a>
+                <p class="post-meta">Created on the
+                  <a href="#">
+                    <%= blogposts[i].username %>
+                  </a>
+                  <%= blogposts[i].datePosted.toDateString() %>
+                </p>
+              </div>
+              <hr>
+              <% } %>
+                <!-- Pager -->
+                <div class="clearfix">
+                  <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+                </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+      <%- include('layouts/footer'); -%>
+        <%- include('layouts/scripts'); -%>
+
+  </body>
+
+</html>

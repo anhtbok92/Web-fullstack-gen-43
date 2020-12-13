@@ -1,0 +1,12 @@
+.form-control {
+  border: none;
+  color: #0085a1;
+  padding-left: 0px;
+}
+.btn-del {
+  padding: 0.375rem 0.75rem;
+}
+
+.btn-del a {
+  color: #fff;
+}
