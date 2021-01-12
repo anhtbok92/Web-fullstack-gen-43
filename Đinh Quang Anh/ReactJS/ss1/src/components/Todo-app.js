@@ -1,6 +1,7 @@
 import React from "react";
-import AddTodo from "./Add-Todo";
+import Loader from "./Loader/loading";
 import Header from "./layout/Header";
+import AddTodo from "./Add-Todo";
 import ListTodo from "./List-todo";
 import { v4 as uuidv4 } from "uuid";
 
@@ -10,7 +11,7 @@ class TodoApp extends React.Component {
       {
         id: "3rjkn-3803-ghiwe4oewo4gy",
         content: "Hello, Welcome to ATodo",
-      }
+      },
     ],
   };
   addItem = (val) => {
@@ -34,10 +35,13 @@ class TodoApp extends React.Component {
 
   render() {
     return (
-      <div className="todo-app">
-        <Header />
-        <AddTodo addItem={this.addItem} />
-        <ListTodo list={this.state.todos} deleteItem={this.deleteItem} />
+      <div className="container">
+        <Loader />
+        <div className="todo-app">
+          <Header />
+          <AddTodo addItem={this.addItem} />
+          <ListTodo list={this.state.todos} deleteItem={this.deleteItem} />
+        </div>
       </div>
     );
   }

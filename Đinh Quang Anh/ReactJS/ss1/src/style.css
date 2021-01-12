@@ -16,6 +16,8 @@ body {
 .todo-app {
   width: 60%;
   margin: 0 auto;
+  display: none;
+  animation: fadeIn linear 1.5s;
 }
 
 .todo-app header {
@@ -54,7 +56,6 @@ body {
   width: 100%;
   background: #eff2f7;
   box-shadow: 0px 0px 14px rgb(0 0 0 / 10%);
-  animation: fadeIn linear infinite;
 }
 .todo-app ul li {
   position: relative;
@@ -102,12 +103,61 @@ body {
 }
 
 @keyframes fadeIn {
-  from {
+  0% {
     left: -50px;
     opacity: 0;
   }
-  to {
+  50% {
+    left: 50px;
+  }
+  100% {
     left: 0px;
     opacity: 1;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#loader {
+  position: absolute;
+  left: 52%;
+  top: 52%;
+  z-index: 1;
+  animation: fadeInOut 1.9s linear;
+}
+#loader .child {
+  width: 50px;
+  height: 50px;
+  margin: -76px 0 0 -76px;
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid #000000;
+  animation: spin 1s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
