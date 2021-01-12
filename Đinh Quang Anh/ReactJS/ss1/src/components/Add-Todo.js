@@ -10,8 +10,10 @@ class AddTodo extends React.Component {
     this.setState({ content: e.target.value });
   };
   addItem = () => {
-    this.props.addItem(this.state.content);
-    this.setState({ content: "" });
+    if (this.state.content !== "") {
+      this.props.addItem(this.state.content);
+      this.setState({ content: "" });
+    }
   };
 
   render() {

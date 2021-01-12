@@ -37,6 +37,7 @@ body {
   font-family: Dirga;
   display: flex;
   flex-direction: row;
+  min-height: 100px;
 }
 .todo-app .add-box input {
   border: none;
@@ -87,7 +88,9 @@ body {
   font-weight: bold;
   font-size: 16px;
   width: 80px;
-  text-align: center !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .btn:hover {
   background: #eff2f7;
