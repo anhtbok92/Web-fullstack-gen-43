@@ -27,13 +27,13 @@ class TodoApp extends React.Component {
     this.setState({
       todos: [
         ...this.state.todos.filter((todo) => {
-          return todo.id !== id;
-        }),
-      ],
-    });
-  };
+          return todo.id !== id;    
+          }),                               
+        ],    
+    });   
+  };          
 
-  render() {
+  render() {  
     return (
       <div className="container">
         <Loader />
@@ -43,7 +43,7 @@ class TodoApp extends React.Component {
           <ListTodo list={this.state.todos} deleteItem={this.deleteItem} />
         </div>
       </div>
-    );
+    ); 
   }
 }
 
