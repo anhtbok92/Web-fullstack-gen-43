@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: Be-Re;
+}
+
+body {
+  width: 100vw;
+  background: #eff2f7;
+  padding: 50px;
+  overflow-x: hidden;
+}
+
+.todo-app {
+  width: 60%;
+  margin: 0 auto;
+  display: none;
+  animation: fadeIn linear 1.5s;
+}
+
+.todo-app header {
+  width: 100%;
+  padding: 40px;
+  background: #eff2f7;
+  box-shadow: 0px 2px 14px rgb(0 0 0 / 10%);
+  font-weight: bold;
+  font-size: 30px;
+  font-family: Dirga;
+}
+.todo-app .add-box {
+  width: 100%;
+  padding: 40px;
+  padding-top: 0;
+  background: #eff2f7;
+  box-shadow: 0px 10px 14px -1px rgb(0 0 0 / 10%);
+  font-weight: bold;
+  font-size: 30px;
+  font-family: Dirga;
+  display: flex;
+  flex-direction: row;
+  min-height: 100px;
+}
+.todo-app .add-box input {
+  border: none;
+  outline: none;
+  padding-left: 15px;
+  width: calc(100% - 80px);
+}
+.todo-app ul {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  width: 100%;
+  background: #eff2f7;
+  box-shadow: 0px 0px 14px rgb(0 0 0 / 10%);
+}
+.todo-app ul li {
+  position: relative;
+  font-weight: normal;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  margin: 0 0 20px 0;
+  transition: 0.3s linear;
+  border-left: 5px solid transparent;
+  border-radius: 2px;
+  animation: fadeIn linear 0.7s;
+}
+.todo-app ul li:hover {
+  transform: scale(0.97);
+  transition: 0.3s linear;
+  box-shadow: 0px 0px 14px rgb(0 0 0 / 10%);
+  border-left: 5px solid #111;
+}
+.todo-app ul li .content {
+  margin-left: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 80%;
+  display: inline-block;
+  overflow: hidden;
+}
+.btn {
+  color: #eff2f7;
+  background: #111;
+  border: 3px solid transparent;
+  padding: 10px;
+  transition: 0.3s linear;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn:hover {
+  background: #eff2f7;
+  border: solid #111;
+  color: #111;
+}
+
+@keyframes fadeIn {
+  0% {
+    left: -50px;
+    opacity: 0;
+  }
+  50% {
+    left: 50px;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#loader {
+  position: absolute;
+  left: 52%;
+  top: 52%;
+  z-index: 1;
+  animation: fadeInOut 1.9s linear;
+}
+#loader .child {
+  width: 50px;
+  height: 50px;
+  margin: -76px 0 0 -76px;
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid #000000;
+  animation: spin 1s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
