@@ -8,6 +8,9 @@ class InputBasic extends React.Component {
         value={this.props.content}
         placeholder={this.props.placeholder}
         onChange={this.props.onInputChange}
+        onKeyDown={(e) => {
+          if (e.keyCode === 13) this.props.addItem();
+        }}
       />
     );
   }

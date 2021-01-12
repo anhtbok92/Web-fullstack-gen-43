@@ -23,6 +23,7 @@ class AddTodo extends React.Component {
           content={this.state.content}
           onInputChange={this.onInputChange}
           placeholder="Enter something ..."
+          addItem={this.addItem}
         />
         <BtnAdd className="btn btn-add" content="Add" addItem={this.addItem} />
       </div>
