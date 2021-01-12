@@ -10,6 +10,7 @@ body {
   width: 100vw;
   background: #eff2f7;
   padding: 50px;
+  overflow-x: hidden;
 }
 
 .todo-app {
@@ -53,8 +54,10 @@ body {
   width: 100%;
   background: #eff2f7;
   box-shadow: 0px 0px 14px rgb(0 0 0 / 10%);
+  animation: fadeIn linear infinite;
 }
 .todo-app ul li {
+  position: relative;
   font-weight: normal;
   list-style: none;
   display: flex;
@@ -66,7 +69,7 @@ body {
   transition: 0.3s linear;
   border-left: 5px solid transparent;
   border-radius: 2px;
-  animation: fadeIn linear .7s;
+  animation: fadeIn linear 0.7s;
 }
 
 .todo-app ul li:hover {
@@ -99,10 +102,12 @@ body {
 }
 
 @keyframes fadeIn {
-  0% {
+  from {
+    left: -50px;
     opacity: 0;
   }
-  100% {
-    opacity: 2;
+  to {
+    left: 0px;
+    opacity: 1;
   }
 }
