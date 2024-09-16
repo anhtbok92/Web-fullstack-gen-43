@@ -1,0 +1,141 @@
+.first-section {
+  padding: 20px;
+  border-bottom: 1px solid black;
+}
+
+.link-container {
+  text-align: right;
+}
+
+.logo-container {
+  padding-bottom: 20px;
+}
+
+.btn-logo {
+  width: 90px;
+  height: 60px;
+  border-radius: 0px;
+}
+
+.top-button-container {
+  text-align: right;
+}
+
+.nav-text {
+  font-weight: bold;
+}
+
+.nav-icon {
+  margin-left: 10px;
+}
+
+.second-section {
+  border-bottom: 1px solid black;
+}
+
+.nav-link {
+  color: #ffffff !important;
+}
+
+@media screen and (max-width: 992px) {
+  .nav-icon {
+    display: none;
+  }
+}
+
+.third-section {
+  padding: 20px;
+  border-bottom: 1px solid black;
+}
+
+.first-title{
+    border-bottom: 1px solid rgb(165, 160, 160);
+    font-size: 18px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    color: #8080808c;
+}
+
+.image-container{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.content-container{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.second-title{
+    font-weight: bold;
+    color: #007bff;
+}
+
+.carousel-container{
+    height: 100px;
+}
+
+.fa-play{
+    font-size: 10px;
+}
+
+.side-link-container{
+    padding: 10px 5px 0px 5px;
+    color: #007bff;
+}
+
+.group-side-link{
+    padding-top: 10px;
+    padding-bottom: 60px;
+}
+
+.group-side-image{
+    padding-top: 20px;
+}
+
+.banner-image{
+    width: 100%;
+    height: 80px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: #a0a5a9!important;
+    border-color: #a0a5a9!important;;
+}
+
+.news-container{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.news{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #8080808c; 
+}
+
+.news-content{
+    color: #007bff;
+}
+
+.banner-contact-image{
+    width: 100%;
+    height: 100px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: #a0a5a9!important;
+    border-color: #a0a5a9!important;;
+}
+
+.fourth-section {
+    padding: 10px 20px 20px 20px;
+    border-bottom: 1px solid black;
+  }
+
+.main-image{
+    background-image: url("https://picsum.photos/seed/picsum/400/300");
+    width: 100%;
+    padding-top: 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
